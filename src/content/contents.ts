@@ -1,3 +1,4 @@
+import { FooterColumnProps } from "@/components/FooterColumn/FooterColumn";
 import { Icons } from "@/components/ui/icons";
 import DevopessLogo from "../../public/devopness.jpg";
 import IfoodLogo from "../../public/ifood.jpg";
@@ -87,5 +88,57 @@ export const stacks = [
   {
     name: "Webpack",
     icon: Icons.webpack,
+  },
+];
+
+export const footerColumns: FooterColumnProps[] = [
+  {
+    columnName: "Build with",
+    links: [
+      {
+        name: "NextJS 13",
+        href: "https://nextjs.org",
+      },
+      {
+        name: "Typescript",
+        href: "https://www.typescriptlang.org",
+      },
+      {
+        name: "Tailwind CSS",
+        href: "https://tailwindcss.com",
+      },
+      {
+        name: "Spline",
+        href: "https://spline.design",
+      },
+    ],
+  },
+
+  {
+    columnName: "My Social profiles",
+    links: [
+      {
+        name: "Linkedin",
+        href: "https://www.linkedin.com/in/matheusfpires/",
+      },
+      {
+        name: "Github",
+        href: "https://github.com/theoxys",
+      },
+      {
+        name: "Youtube",
+        href: "https://www.youtube.com/@matheuspires-dev",
+      },
+    ],
+  },
+
+  {
+    columnName: "For recruiters",
+    links: [
+      {
+        name: "Download my Resume",
+        href: "https://www.linkedin.com/in/matheusfpires/",
+      },
+    ],
   },
 ];

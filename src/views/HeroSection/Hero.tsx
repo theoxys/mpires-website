@@ -30,7 +30,6 @@ export const HeroSection = () => {
         scene="https://prod.spline.design/X4bytgkcarlqM5pU/scene.splinecode"
         className="z-20"
       />
-      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent"></div>
     </div>
   );
 };

@@ -2,16 +2,21 @@
 
 import { stacks } from "@/content/contents";
 import { useKeenSlider } from "keen-slider/react";
+import { useRef } from "react";
 import { SliderItem } from "./SliderItem";
 
 const animation = { duration: 30000, easing: (t: any) => t };
 
+// 6 - 15
+
 export const Slider = () => {
+  const wSize = useRef(window.innerWidth);
+
   const [sliderRef] = useKeenSlider({
     loop: true,
     slides: {
-      perView: 6,
-      spacing: 15,
+      perView: wSize.current < 1024 ? 2 : 6,
+      spacing: wSize.current < 1024 ? 4 : 15,
     },
     renderMode: "performance",
     drag: true,
@@ -27,12 +32,14 @@ export const Slider = () => {
   });
 
   return (
-    <div className="keen-slider relative" ref={sliderRef}>
-      <div className="absolute h-20 w-24 z-50 -left-1 top-0 bottom-0 my-auto bg-gradient-to-r from-black rounded-3xl "></div>
+    <div className="keen-slider relative z-[29]" ref={sliderRef}>
+      {/* <div className="absolute h-16 w-52 z-30 -left-2 top-0 bottom-0 my-auto bg-gradient-to-r from-slate-900 to-transparent blur-sm opacity-80" /> */}
+      <div className="absolute h-24 w-[2px] left-0 top-0 bg-gradient-to-b from-transparent via-slate-800 to-transparent z-[31] "></div>
       {stacks.map((stack, index) => (
         <SliderItem name={stack.name} icon={stack.icon} key={index} />
       ))}
-      <div className="absolute h-20 w-24 z-50 -right-1 top-0 bottom-0 my-auto bg-gradient-to-r from-transparent to-black rounded-3xl"></div>
+      {/* <div className="absolute h-16 w-52 z-30 -right-2 top-0 bottom-0 my-auto bg-gradient-to-l from-slate-900 to-transparent blur-sm opacity-80"></div> */}
+      <div className="absolute h-24 w-[2px] right-0 top-0 bg-gradient-to-b from-transparent via-slate-800 to-transparent z-[31] "></div>
     </div>
   );
 };

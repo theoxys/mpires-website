@@ -1,18 +1,17 @@
+import { SectionTitle } from "@/components/SectionTitle/SectionTitle";
 import { Slider } from "@/components/Slider/Slider";
 
 export const StacksSection = () => {
   return (
-    <div className="flex flex-col w-full min-h-full max-w-7xl">
-      <div className="flex gap-4 items-center mb-16">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent"></div>
-        <h1 className="text-slate-200 mt-6 font-light text-sm tracking-widest z-10 uppercase w-[500px] text-center">
-          Some technologies I currently use
-        </h1>
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent"></div>
+    <div className="relative flex flex-col w-full min-h-full max-w-7xl mb-40 items-center px-4">
+      <SectionTitle>Some technologies I currently use</SectionTitle>
+      <div className="relative h-64 w-full z-20 bg-white/[1%] rounded-2xl border border-slate-200/[1%] backdrop-blur-lg shadow-xl shadow-black/50 flex items-center">
+        <div className="absolute top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent z-30"></div>
+        <Slider />
+        <div className="absolute bottom-0 h-[1px] w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent mt-16 z-30"></div>
       </div>
-      <Slider />
 
-      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-slate-800 to-transparent mt-16"></div>
+      <div className="absolute w-[700px] rotate-[20deg]  h-72 rounded-full z-10 bg-gradient-to-br from-violet-500 via-sky-400 to-emerald-500 blur-3xl opacity-10 -left-[10%] top-[10%]" />
     </div>
   );
 };

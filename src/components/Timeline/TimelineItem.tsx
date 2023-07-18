@@ -21,7 +21,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({
         <div className="flex max-h-8 max-w-8 w-8 h-full rounded-full border border-slate-700 bg-emerald-500/10 items-center justify-center shadow-lg shadow-emerald-500/20">
           <Laptop size={14} className="text-emerald-300" />
         </div>
-        <div className="border-l border-slate-800 h-full"></div>
+        <div className="w-[1px] h-full bg-gradient-to-t from-slate-900/40 to-slate-800"></div>
       </aside>
       <section className="flex flex-col gap-2 pb-8">
         <div className="h-8">
