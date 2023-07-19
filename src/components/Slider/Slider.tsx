@@ -10,13 +10,13 @@ const animation = { duration: 30000, easing: (t: any) => t };
 // 6 - 15
 
 export const Slider = () => {
-  const wSize = useRef(window.innerWidth);
+  const wSize = useRef<number | null>(window.innerWidth);
 
   const [sliderRef] = useKeenSlider({
     loop: true,
     slides: {
-      perView: wSize.current < 1024 ? 2 : 6,
-      spacing: wSize.current < 1024 ? 4 : 15,
+      perView: wSize.current && wSize.current < 1024 ? 2 : 6,
+      spacing: wSize.current && wSize.current < 1024 ? 4 : 15,
     },
     renderMode: "performance",
     drag: true,
