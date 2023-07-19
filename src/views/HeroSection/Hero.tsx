@@ -28,8 +28,9 @@ export const HeroSection = () => {
 
       <div className="h-64 w-64">
         <Spline
-          scene="https://prod.spline.design/X4bytgkcarlqM5pU/scene.splinecode"
+          scene="https://prod.spline.design/X4bytgkcarlqM5pU/scene.splinecode?at=12"
           className="z-20 h-64 w-64"
+          style={{ width: "500px" }}
         />
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 import { stacks } from "@/content/contents";
 import { useKeenSlider } from "keen-slider/react";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
 import { SliderItem } from "./SliderItem";
 
 const animation = { duration: 30000, easing: (t: any) => t };
@@ -10,13 +10,22 @@ const animation = { duration: 30000, easing: (t: any) => t };
 // 6 - 15
 
 export const Slider = () => {
-  const wSize = useRef<number | null>(window.innerWidth);
+  const [wSize, setWSize] = useState(0);
+
+  useEffect(() => {
+    const changeWidthHandler = () => {
+      setWSize(window.innerWidth);
+    };
+    window.addEventListener("resize", changeWidthHandler);
+    changeWidthHandler();
+    return () => window.removeEventListener("resize", changeWidthHandler);
+  }, []);
 
   const [sliderRef] = useKeenSlider({
     loop: true,
     slides: {
-      perView: wSize.current && wSize.current < 1024 ? 2 : 6,
-      spacing: wSize.current && wSize.current < 1024 ? 4 : 15,
+      perView: wSize < 1024 ? 2 : 6,
+      spacing: wSize < 1024 ? 4 : 15,
     },
     renderMode: "performance",
     drag: true,
