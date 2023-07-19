@@ -30,7 +30,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({
           </span>
         </div>
         <div className="flex gap-4 border border-slate-800 rounded-2xl p-4 bg-slate-700/10">
-          <div className="h-8 w-8 mt-1">
+          <div className="h-8 w-8 mt-1 min-w-[32px]">
             <Image src={logo} alt="Company Logo" className="rounded-lg" />
           </div>
           <div className="flex flex-col gap-2">

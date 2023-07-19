@@ -9,25 +9,28 @@ export const professionalExperience = [
   {
     companyName: "Ifood",
     workingDates: "mar 2022 - mar 2023",
-    description: "Software Engineer na maior food tech da america latina",
+    description: "Software engineer at the biggest food tech in latin america.",
     logo: IfoodLogo,
   },
   {
     companyName: "Movidesk",
     workingDates: "mar 2022 - mar 2023",
-    description: "Software Engineer na maior food tech da america latina",
+    description:
+      "Software engineer at one of the largest omnichannel communication and service platforms aimed at small and medium-sized businesses.",
     logo: MoviLogo,
   },
   {
     companyName: "Tech4Humans",
     workingDates: "mar 2022 - mar 2023",
-    description: "Software Engineer na maior food tech da america latina",
+    description:
+      "Software Engineer at a work wutomations hub for customer service.",
     logo: T4hLogo,
   },
   {
     companyName: "Devopness",
     workingDates: "mar 2022 - mar 2023",
-    description: "Software Engineer na maior food tech da america latina",
+    description:
+      "Software Engineer at a platform for application deployment and infrastructure management on multiple clouds.",
     logo: DevopessLogo,
   },
 ];
