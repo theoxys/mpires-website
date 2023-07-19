@@ -5,12 +5,12 @@ import Spline from "@splinetool/react-spline";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row max-w-7xl w-full relative min-h-screen justify-center lg:justify-start px-4">
+    <div className="flex flex-col-reverse items-center lg:flex-row max-w-7xl w-full relative min-h-[600px] lg:min-h-screen justify-center lg:justify-start px-4">
       <div className="flex flex-col my-auto top-0 bottom-60 h-fit items-center lg:items-start">
         <h2 className="text-slate-200 mb-6 font-light text-xl tracking-widest ">
           👋 HI, I'M
         </h2>
-        <h1 className="font-bold tracking-widest whitespace-break-spaces text-[100px] leading-none drop-shadow-lg text-slate-200 z-10 text-center lg:text-start">
+        <h1 className="font-bold tracking-widest whitespace-break-spaces text-5xl lg:text-[100px] leading-none drop-shadow-lg text-slate-200 z-10 text-center lg:text-start">
           MATHEUS
           <br />
           PIRES
@@ -20,11 +20,11 @@ export const HeroSection = () => {
         </h2>
       </div>
 
-      <div className="z-20 relative -left-[20%]">
+      <div className="z-20 relative lg:-left-[10%] h-[300px] w-[400px] lg:h-[800px] lg:w-[950px]">
         <Spline
-          scene="https://draft.spline.design/yDXRrlzLqfBxplhj/scene.splinecode"
-          className="z-20 h-64 w-64"
-          style={{ width: "500px" }}
+          scene="https://draft.spline.design/hEWLZ4p1JkkvyZMm/scene.splinecode"
+          className="z-20"
+          style={{ width: "inherit", height: "inherit" }}
         />
       </div>
 
