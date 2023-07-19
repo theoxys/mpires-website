@@ -1,5 +1,3 @@
-"use client";
-
 import { Navbar } from "@/components/Navbar/Navbar";
 import "keen-slider/keen-slider.min.css";
 import type { Metadata } from "next";

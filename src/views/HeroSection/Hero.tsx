@@ -4,13 +4,13 @@ import Spline from "@splinetool/react-spline";
 
 export const HeroSection = () => {
   return (
-    <div className="flex max-w-7xl w-full relative min-h-screen">
-      <div className="flex flex-col absolute my-auto top-0 bottom-60 h-fit">
+    <div className="flex max-w-7xl w-full relative min-h-screen justify-center lg:justify-start px-4">
+      <div className="flex flex-col absolute my-auto top-0 bottom-60 h-fit items-center lg:items-start">
         <h2 className="text-slate-200 mb-6 font-light text-xl tracking-widest ">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           👋 HI, I'M
         </h2>
-        <h1 className="font-bold tracking-widest whitespace-break-spaces text-[100px] leading-none drop-shadow-lg text-slate-200 z-10">
+        <h1 className="font-bold tracking-widest whitespace-break-spaces text-[100px] leading-none drop-shadow-lg text-slate-200 z-10 text-center lg:text-start">
           MATHEUS
           <br />
           PIRES
@@ -26,10 +26,12 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <Spline
-        scene="https://prod.spline.design/X4bytgkcarlqM5pU/scene.splinecode"
-        className="z-20"
-      />
+      <div className="h-64 w-64">
+        <Spline
+          scene="https://prod.spline.design/X4bytgkcarlqM5pU/scene.splinecode"
+          className="z-20 h-64 w-64"
+        />
+      </div>
     </div>
   );
 };
